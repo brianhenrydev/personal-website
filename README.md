@@ -9,7 +9,7 @@
 - `linkedin`
 - `projects`
 - `clear`
-- `alllinks`
+- `all_links`
 - `stats` 
 
 ## tech used

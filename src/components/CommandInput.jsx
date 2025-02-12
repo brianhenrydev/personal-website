@@ -12,7 +12,7 @@ const CommandInput = ({ command, setCommand, setOutput }) => {
     { cmd: "linkedin", desc: "view my linkedin", link: "https://www.linkedin.com/in/brian-e-henry/" },
     { cmd: "projects", desc: "view my projects", link: "#" },
     { cmd: "clear", desc: "clear the terminal", link: "#" },
-    { cmd: "all", desc: "view all links", link: "#" },
+    { cmd: "all_links", desc: "view all links", link: "#" },
     { cmd: "stats", desc: "view my stats on github", link: "#" }
 
   ]
@@ -33,6 +33,7 @@ const CommandInput = ({ command, setCommand, setOutput }) => {
 
               case "help":
               case "ls":
+              case "?":
                 return (
                   <div>
                     <ListCommands
@@ -60,6 +61,7 @@ const CommandInput = ({ command, setCommand, setOutput }) => {
                 );
 
               case "linkedin":
+              case "lnkd":
                 return (
                   <div>
                     <a
@@ -81,7 +83,7 @@ const CommandInput = ({ command, setCommand, setOutput }) => {
                 setOutput("")
                 return <></>;
 
-              case "all":
+              case "all_links":
                 return <AllLinks />
               default:
                 return <div>Command not found. Enter <code className="text-yellow-400">help</code> to see available commands.</div>;
